@@ -17,7 +17,8 @@ if ($conn->connect_error) {
  if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $password = $_POST['password'];
-    $role = $_POST['role'];
+    $role = $_POST['roles'];
+    $genres = $_POST['genres'];
 
     $sql = "INSERT INTO Users (Username, Password, Role) VALUES ('$name', '$password', '$role)";
     if ($conn->query($sql) === TRUE) {

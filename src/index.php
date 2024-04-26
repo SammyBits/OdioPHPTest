@@ -37,15 +37,20 @@
     </style>
 
     <h2>Crear nuevo usuario</h2>
-    <?php
-    require ("./services/create.php");
-
-    ?>
 
     <form action="create.php" method="post">
         <input type="text" name="name" placeholder="Name">
         <input type="password" name="password" placeholder="Password">
-        <input type="text" name="role" placeholder="Role">
+        <select name="roles" id="role">
+            <?php
+            require ("./services/genres.php");
+            ?>
+        </select>
+        <select name="genres" id="genre">
+            <?php
+            require ("./services/roles.php");
+            ?>
+        </select>
         <input type="submit" value="Guardar">
     </form>
 </body>
